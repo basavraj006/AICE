@@ -1,0 +1,61 @@
+<footer class="footer">
+
+  <div class="footer-top">
+    <!-- Left content -->
+    <div class="footer-left">
+      <h3>
+        Education must be obtained by anyone and anywhere without any limitations
+      </h3>
+    </div>
+
+    <!-- Right WhatsApp CTA -->
+    <div class="footer-right">
+      <div class="whatsapp-box">
+        <input type="text" value="9945470269" readonly />
+        <button (click)="openWhatsApp()">Chat on WhatsApp</button>
+      </div>
+
+      <p class="note">
+        Contact us directly on WhatsApp for course details & enquiries.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <!-- Address -->
+    <div class="footer-col">
+      <h4>AICE Computers</h4>
+      <p>
+        2nd Floor Vishnu Complex,<br />
+        Opposite Sudhir Medical,<br />
+        Near Siddeshwar Temple,<br />
+        Vijayapura
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/courses">Courses</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Students -->
+    <div class="footer-col">
+      <h4>Students</h4>
+      <ul>
+        <li><a routerLink="/courses">Courses</a></li>
+        <li><a routerLink="/register">Register</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    © {{ currentYear }} AICE Computers. All rights reserved.
+  </div>
+
+</footer>

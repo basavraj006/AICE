@@ -1,0 +1,60 @@
+<section>
+  <div class="form-card glass">
+    <h2>Register Now</h2>
+
+    <form (ngSubmit)="sendToWhatsApp()">
+      <input placeholder="Your Name" [(ngModel)]="name" name="name" required>
+      <input placeholder="Mobile Number" [(ngModel)]="phone" name="phone" required>
+      <input placeholder="Course" [(ngModel)]="course" name="course" readonly>
+
+      <button class="btn" type="submit">Submit via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- CLASSROOM SECTION -->
+<section class="classroom-section reveal">
+
+  <h2 class="classroom-title">Our Classroom Environment</h2>
+
+  <p class="classroom-text">
+    At Academic Institute of Computer Education, we believe learning should be
+    practical, comfortable, and inspiring. Our classrooms are designed to
+    provide hands-on training with modern computer systems, experienced
+    faculty guidance, and a focused learning atmosphere.
+  </p>
+
+  <div class="classroom-grid">
+    <div class="classroom-card glass">
+      <img src="assets/classroom1.jpg" alt="Classroom Training" />
+      <p>Practical Computer Training Sessions</p>
+    </div>
+
+    <div class="classroom-card glass">
+      <img src="assets/classroom2.jpg" alt="Students Learning" />
+      <p>Student-Focused Learning Environment</p>
+    </div>
+
+    <div class="classroom-card glass">
+      <img src="assets/classroom3.jpg" alt="Instructor Teaching" />
+      <p>Experienced Faculty Guidance</p>
+    </div>
+
+    <div class="classroom-card glass">
+      <img src="assets/classroom4.jpg" alt="Computer Lab" />
+      <p>Well-Equipped Computer Labs</p>
+    </div>
+
+    <div class="classroom-card glass">
+      <img src="assets/classroom6.jpg" alt="Computer Lab" />
+      <p>Office</p>
+    </div>
+
+    <div class="classroom-card glass">
+      <img src="assets/classroom5.jpg" alt="Computer Lab" />
+      <p>Classroom</p>
+    </div>
+  </div>
+
+</section>
+

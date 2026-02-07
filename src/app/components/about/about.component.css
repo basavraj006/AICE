@@ -1,0 +1,288 @@
+/* =========================
+   ABOUT SECTION (FULL WIDTH)
+   ========================= */
+
+.about-section {
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;   /* no side padding here */
+}
+
+/* Inner container */
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.5rem; /* side padding only for content */
+  text-align: center;
+}
+
+/* Headings */
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 2rem;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  margin: 2.5rem 0 1.5rem;
+  color: #0f172a;
+}
+
+/* Founder */
+.founder {
+  max-width: 580px;
+  margin: auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.founder img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 1.2rem;
+}
+
+.founder h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.role {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Directors */
+.directors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.director {
+  text-align: center;
+}
+
+.director img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2563eb;
+  margin-bottom: 0.8rem;
+}
+
+.director h4 {
+  font-size: 1rem;
+}
+
+.director p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+/* About text */
+.about-text {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  line-height: 1.7;
+}
+
+/* =========================
+   JOURNEY SECTION
+   ========================= */
+
+.journey-section {
+  width: 100%;
+  background: #f1f1f1;
+  padding: 5rem 0;
+}
+
+/* Heading */
+.journey-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.journey-title span:first-child {
+  color: #2563eb;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.journey-title .light {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: rgba(37, 99, 235, 0.3);
+}
+
+/* Items */
+.timeline-item {
+  width: 50%;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 1.8rem;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.timeline-item.left::after {
+  right: -7px;
+}
+
+.timeline-item.right::after {
+  left: -7px;
+}
+
+/* Content */
+.timeline .content {
+  padding: 1.6rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.timeline h4 {
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.timeline p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   MOBILE FIXES
+   ========================= */
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .founder img {
+    height: 220px;
+  }
+
+  .director img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    text-align: left !important;
+    left: 0 !important;
+  }
+
+  .timeline-item::after {
+    left: 3px !important;
+  }
+}
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== Journey card hover animation ===== */
+
+.timeline .content {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.timeline .content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+/* =========================
+   ABOUT & JOURNEY ANIMATIONS
+========================= */
+
+.slide-up,
+.slide-left,
+.slide-right {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Directions */
+.slide-up {
+  transform: translateY(30px);
+}
+
+.slide-left {
+  transform: translateX(-60px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+
+/* Triggered by animateOnScroll */
+.animate.slide-up,
+.animate.slide-left,
+.animate.slide-right {
+  opacity: 1;
+  transform: translate(0, 0);
+}

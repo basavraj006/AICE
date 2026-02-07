@@ -1,0 +1,66 @@
+<section>
+  <h2 class="title" style="color: aliceblue; padding: 10px; font-size: xx-large;">Our Courses</h2>
+
+  <div class="course-grid">
+    <div
+      class="course-card glass"
+      *ngFor="let c of courses"
+      [attr.data-category]="c.category"
+    >
+
+      <!-- Popular Badge -->
+      <span class="badge" *ngIf="c.popular">Popular</span>
+
+      <!-- Clickable Content -->
+      <div class="card-content" (click)="openDetails(c)">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+            <line x1="8" y1="20" x2="16" y2="20"></line>
+          </svg>
+        </div>
+
+        <h3>{{ c.name }}</h3>
+        <p class="duration">⏱ {{ c.duration }}</p>
+      </div>
+
+      <!-- Actions -->
+      <div class="card-actions">
+        <button class="btn secondary" (click)="openDetails(c)">
+          Details
+        </button>
+
+        <button class="btn" (click)="enroll(c.name)">
+          Enroll
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-backdrop" *ngIf="selectedCourse">
+  <div class="modal glass scale-in">
+
+    <h3>{{ selectedCourse.name }}</h3>
+    <p><strong>Duration:</strong> {{ selectedCourse.duration }}</p>
+
+    <ul>
+      <li *ngFor="let d of selectedCourse.details">
+         {{ d }}
+      </li>
+    </ul>
+
+    <div class="modal-actions">
+      <button class="btn" (click)="enroll(selectedCourse.name)">
+        Enroll Now
+      </button>
+
+      <button class="btn secondary" (click)="closeDetails()">
+        Close
+      </button>
+    </div>
+
+  </div>
+</div>

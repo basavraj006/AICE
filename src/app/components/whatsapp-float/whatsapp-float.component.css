@@ -1,0 +1,125 @@
+/* =========================
+   WHATSAPP FLOAT
+   ========================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+
+  transition: box-shadow 0.3s ease;
+}
+
+/* =========================
+   BASE FLOATING BUTTON STYLE
+   ========================= */
+
+.action-float {
+  position: fixed;
+  right: 24px;
+
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.4rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  color: #ffffff;
+  z-index: 9998;
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* =========================
+   POSITIONS & COLORS
+   ========================= */
+
+.phone-float {
+  bottom: 96px;
+  background: #2563eb;
+}
+
+.email-float {
+  bottom: 160px;
+  background: #7c3aed;
+}
+
+.top-float {
+  bottom: 224px;
+  background: #0f172a;
+}
+
+/* =========================
+   SAME HOVER FLOAT ANIMATION
+   ========================= */
+
+.whatsapp-float:hover,
+.action-float:hover {
+  animation: floatHover 1.6s ease-in-out infinite;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Floating animation */
+@keyframes floatHover {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+   ========================= */
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    right: 18px;
+  }
+
+  .action-float {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+    right: 18px;
+  }
+
+  .phone-float {
+    bottom: 88px;
+  }
+
+  .email-float {
+    bottom: 148px;
+  }
+
+  .top-float {
+    bottom: 208px;
+  }
+}

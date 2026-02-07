@@ -1,0 +1,120 @@
+.footer {
+  background: #2f327d; /* deep blue */
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+/* Top section */
+.footer-top {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-left h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  max-width: 420px;
+  color: #ffffff; /* 🔥 force visible */
+}
+
+/* WhatsApp box */
+.whatsapp-box {
+  display: flex;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.whatsapp-box input {
+  border: none;
+  padding: 0.7rem 1rem;
+  flex: 1;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.whatsapp-box button {
+  border: none;
+  background: #22c55e;
+  color: #ffffff;
+  padding: 0 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.whatsapp-box button:hover {
+  background: #16a34a;
+}
+
+.note {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.85); /* 🔥 readable */
+}
+
+/* Bottom section */
+.footer-bottom {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-col h4 {
+  margin-bottom: 0.8rem;
+  color: #ffffff; /* 🔥 force visible */
+}
+
+.footer-col p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95); /* 🔥 no fading */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-col a:hover {
+  color: #c7d2fe;
+  text-decoration: underline;
+}
+
+/* Copyright */
+.footer-copy {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background: #262962;
+  color: rgba(255, 255, 255, 0.95); /* 🔥 visible */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .whatsapp-box {
+    width: 100%;
+  }
+}

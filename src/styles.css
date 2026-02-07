@@ -1,0 +1,183 @@
+/* =======================
+   RESET & BASE
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  color: #0f172a;
+  background: #f8fafc; /* white-blue base */
+}
+
+/* =======================
+   BACKGROUND IMAGE
+======================= */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('/assets/bg1.png') center / cover no-repeat;
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+/* Light blue overlay (NOT dark) */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(242, 242, 242, 0); /* white overlay */
+  z-index: -1;
+}
+
+/* =======================
+   GLASS CARDS (WHITE GLASS)
+======================= */
+.glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.15); /* blue border */
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift */
+.glass:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* =======================
+   SECTIONS
+======================= */
+section {
+  padding: 4rem 1.5rem;
+}
+
+/* =======================
+   TYPOGRAPHY
+======================= */
+h1, h2, h3, h4 {
+  color: #1e3a8a; /* deep blue */
+}
+
+p, li {
+  color: #334155; /* soft gray-blue */
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+
+  background: #2563eb; /* primary blue */
+  color: #ffffff;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Secondary button (white) */
+.btn.secondary {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn.secondary:hover {
+  background: #eff6ff;
+}
+
+/* =======================
+   INPUTS
+======================= */
+input, select {
+  padding: 0.85rem;
+  border-radius: 12px;
+  border: 1px solid #c7d2fe;
+  width: 100%;
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   MOBILE POLISH
+======================= */
+@media (max-width: 768px) {
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .hero-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .course-card {
+    padding: 1.5rem;
+  }
+}
+
+.btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}

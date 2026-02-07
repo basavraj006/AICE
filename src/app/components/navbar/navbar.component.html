@@ -1,0 +1,22 @@
+<nav class="navbar">
+<!-- <div class="logo">
+  <img src="assets/logo.png" alt="AICE Logo">
+</div> -->
+
+<a routerLink="/" class="logo">
+  <img src="assets/logo.png" alt="AICE Logo">
+</a>
+
+
+  <div class="menu-icon" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <ul [class.open]="menuOpen">
+    <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+    <li><a routerLink="/courses" (click)="toggleMenu()">Courses</a></li>
+    <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+    <li><a routerLink="/register" (click)="toggleMenu()">Register</a></li>
+    <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+  </ul>
+</nav>
