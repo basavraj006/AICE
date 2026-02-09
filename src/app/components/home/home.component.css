@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(125deg, #191a1b, #2755d4);
 }
 
 .hero-card {
